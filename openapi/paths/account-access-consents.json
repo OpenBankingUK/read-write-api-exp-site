@@ -1,0 +1,67 @@
+{
+  "path": {
+  "post": {
+    "tags": [
+      "Account Access"
+    ],
+    "summary": "Create Account Access Consents",
+    "operationId": "CreateAccountAccessConsents",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/x-fapi-auth-date"
+      },
+      {
+        "$ref": "#/components/parameters/x-fapi-customer-ip-address"
+      },
+      {
+        "$ref": "#/components/parameters/x-fapi-interaction-id"
+      },
+      {
+        "$ref": "#/components/parameters/Authorization"
+      },
+      {
+        "$ref": "#/components/parameters/x-customer-user-agent"
+      }
+    ],
+    "responses": {
+      "201": {
+        "$ref": "#/components/responses/201AccountAccessConsentsCreated"
+      },
+      "400": {
+        "$ref": "#/components/responses/400Error"
+      },
+      "401": {
+        "$ref": "#/components/responses/401Error"
+      },
+      "403": {
+        "$ref": "#/components/responses/403Error"
+      },
+      "405": {
+        "$ref": "#/components/responses/405Error"
+      },
+      "406": {
+        "$ref": "#/components/responses/406Error"
+      },
+      "415": {
+        "$ref": "#/components/responses/415Error"
+      },
+      "429": {
+        "$ref": "#/components/responses/429Error"
+      },
+      "500": {
+        "$ref": "#/components/responses/500Error"
+      }
+    },
+    "security": [
+      {
+        "TPPOAuth2Security": [
+          "accounts"
+        ]
+      }
+    ],
+    "requestBody": {
+      "$ref": "#/components/requestBodies/OBReadConsent1Param"
+    }
+  }
+  }
+}
