@@ -15,9 +15,6 @@
     "version": "v3.1.5"
   },
   "paths": {
-    "/aa": {
-      "$ref": "foo.json#/x"
-    },
     "/account-access-consents": {
       "post": {
         "tags": [
@@ -26,10 +23,25 @@
         "summary": "Create Account Access Consents",
         "operationId": "CreateAccountAccessConsents",
         "parameters": [
+          {
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
+          },
+          {
+            "$ref": "#/components/parameters/x-fapi-customer-ip-address"
+          },
+          {
+            "$ref": "#/components/parameters/x-fapi-interaction-id"
+          },
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/x-customer-user-agent"
+          }
         ],
         "responses": {
           "201": {
-            "$ref": "c.json#x"
+            "$ref": "#/components/responses/201AccountAccessConsentsCreated"
           },
           "400": {
             "$ref": "#/components/responses/400Error"
@@ -80,7 +92,7 @@
             "$ref": "#/components/parameters/ConsentId"
           },
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -140,7 +152,7 @@
             "$ref": "#/components/parameters/ConsentId"
           },
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -199,7 +211,7 @@
         "operationId": "GetAccounts",
         "parameters": [
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -261,7 +273,7 @@
             "$ref": "#/components/parameters/AccountId"
           },
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -323,7 +335,7 @@
             "$ref": "#/components/parameters/AccountId"
           },
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -385,7 +397,7 @@
             "$ref": "#/components/parameters/AccountId"
           },
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -450,7 +462,7 @@
             "$ref": "#/components/parameters/AccountId"
           },
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -515,7 +527,7 @@
             "$ref": "#/components/parameters/AccountId"
           },
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -580,7 +592,7 @@
             "$ref": "#/components/parameters/AccountId"
           },
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -645,7 +657,7 @@
             "$ref": "#/components/parameters/AccountId"
           },
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -710,7 +722,7 @@
             "$ref": "#/components/parameters/AccountId"
           },
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -775,7 +787,7 @@
             "$ref": "#/components/parameters/AccountId"
           },
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -840,7 +852,7 @@
             "$ref": "#/components/parameters/AccountId"
           },
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -905,7 +917,7 @@
             "$ref": "#/components/parameters/AccountId"
           },
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -979,7 +991,7 @@
             "$ref": "#/components/parameters/AccountId"
           },
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -1047,7 +1059,7 @@
             "$ref": "#/components/parameters/AccountId"
           },
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -1115,7 +1127,7 @@
             "$ref": "#/components/parameters/AccountId"
           },
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -1180,7 +1192,7 @@
             "$ref": "#/components/parameters/AccountId"
           },
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -1245,7 +1257,7 @@
         "operationId": "GetBalances",
         "parameters": [
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -1307,7 +1319,7 @@
         "operationId": "GetBeneficiaries",
         "parameters": [
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -1369,7 +1381,7 @@
         "operationId": "GetDirectDebits",
         "parameters": [
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -1431,7 +1443,7 @@
         "operationId": "GetOffers",
         "parameters": [
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -1493,7 +1505,7 @@
         "operationId": "GetParty",
         "parameters": [
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -1555,7 +1567,7 @@
         "operationId": "GetProducts",
         "parameters": [
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -1617,7 +1629,7 @@
         "operationId": "GetScheduledPayments",
         "parameters": [
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -1679,7 +1691,7 @@
         "operationId": "GetStandingOrders",
         "parameters": [
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -1741,7 +1753,7 @@
         "operationId": "GetStatements",
         "parameters": [
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -1809,7 +1821,7 @@
         "operationId": "GetTransactions",
         "parameters": [
           {
-            "$ref": "#/components/parameters/x-fapi-auth-date"
+            "$ref": "components/parameters/x-fapi-auth-date.json#/x"
           },
           {
             "$ref": "#/components/parameters/x-fapi-customer-ip-address"
@@ -1869,10 +1881,8 @@
       }
     }
   },
-"components": {
-
+  "components": {
     "parameters": {
-
       "FromBookingDateTimeParam": {
         "in": "query",
         "name": "fromBookingDateTime",
@@ -1961,16 +1971,6 @@
         "description": "The PSU's IP address if the PSU is currently logged in with the TPP.",
         "schema": {
           "type": "string"
-        }
-      },
-      "x-fapi-auth-date": {
-        "in": "header",
-        "name": "x-fapi-auth-date",
-        "required": false,
-        "description": "The time when the PSU last logged in with the TPP. \nAll dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: \nSun, 10 Sep 2017 19:43:31 UTC",
-        "schema": {
-          "type": "string",
-          "pattern": "^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), \\d{2} (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \\d{4} \\d{2}:\\d{2}:\\d{2} (GMT|UTC)$"
         }
       },
       "x-fapi-interaction-id": {
@@ -12994,6 +12994,5 @@
         }
       }
     }
-  
   }
 }
