@@ -1,14 +1,13 @@
 {
   "x": {
-    "foo": {
-  "get": {
-    "description":"",
-    "parameters": [],
-    "responses": {
-      "200": {
-        "description": "OK"
+    "get": {
+      "description":"xxxx",
+      "parameters": [],
+      "responses": {
+        "200": {
+          "description": "OK"
+        }
       }
     }
   }
 }
-  }

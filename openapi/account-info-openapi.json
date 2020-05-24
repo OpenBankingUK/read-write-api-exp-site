@@ -26,11 +26,10 @@
         "summary": "Create Account Access Consents",
         "operationId": "CreateAccountAccessConsents",
         "parameters": [
-          { "$ref": "foo.json#/param1" }
         ],
         "responses": {
           "201": {
-            "$ref": "#/components/responses/201AccountAccessConsentsCreated"
+            "$ref": "c.json#x"
           },
           "400": {
             "$ref": "#/components/responses/400Error"
@@ -12996,22 +12995,5 @@
       }
     }
   
-  },
-  "param1": [
-    {
-      "$ref": "#/components/parameters/x-fapi-auth-date"
-    },
-    {
-      "$ref": "#/components/parameters/x-fapi-customer-ip-address"
-    },
-    {
-      "$ref": "#/components/parameters/x-fapi-interaction-id"
-    },
-    {
-      "$ref": "#/components/parameters/Authorization"
-    },
-    {
-      "$ref": "#/components/parameters/x-customer-user-agent"
-    }
-  ],
+  }
 }
